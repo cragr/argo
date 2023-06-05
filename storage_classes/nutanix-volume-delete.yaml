@@ -15,11 +15,5 @@ parameters:
   csi.storage.k8s.io/fstype: ext4
   storageContainer: default-container
   storageType: NutanixVolumes
-  #description: "description added to each storage object created by the driver"
-  #isSegmentedIscsiNetwork: "false"
-  #whitelistIPMode: ENABLED
-  #chapAuth: ENABLED
-  #isLVMVolume: "false"
-  #numLVMDisks: 4
 allowVolumeExpansion: true
 reclaimPolicy: Delete
