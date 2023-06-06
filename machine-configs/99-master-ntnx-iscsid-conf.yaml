@@ -10,8 +10,357 @@ metadata:
       version: 3.2.0
     storage:
       files:
-      - contents:
-          source: data:text/plain;charset=utf-8;base64,IwojIE51dGFuaXggLSBMaW51eCBDbGllbnQgVHVuaW5nIEV4YW1wbGUKIyBodHRwczovL3BvcnRhbC5udXRhbml4LmNvbS9wYWdlL2RvY3VtZW50cy9zb2x1dGlvbnMvZGV0YWlscz90YXJnZXRJZD1CUC0yMDQ5LU51dGFuaXgtVm9sdW1lczpsaW51eC1jbGllbnQtdHVuaW5nLWV4YW1wbGUuaHRtbAojCm5vZGUuc2Vzc2lvbi50aW1lby5yZXBsYWNlbWVudF90aW1lb3V0ID0gMTIwCm5vZGUuY29ublswXS50aW1lby5ub29wX291dF9pbnRlcnZhbCA9IDUKbm9kZS5jb25uWzBdLnRpbWVvLm5vb3Bfb3V0X3RpbWVvdXQgPSAxMApub2RlLnNlc3Npb24uY21kc19tYXggPSAyMDQ4Cm5vZGUuc2Vzc2lvbi5xdWV1ZV9kZXB0aCA9IDEwMjQKbm9kZS5zZXNzaW9uLmlzY3NpLkltbWVkaWF0ZURhdGEgPSBZZXMKbm9kZS5zZXNzaW9uLmlzY3NpLkZpcnN0QnVyc3RMZW5ndGggPSAxMDQ4NTc2Cm5vZGUuc2Vzc2lvbi5pc2NzaS5NYXhCdXJzdExlbmd0aCA9IDE2Nzc2MTkyCm5vZGUuY29ublswXS5pc2NzaS5NYXhSZWN2RGF0YVNlZ21lbnRMZW5ndGggPSAxMDQ4NTc2CmRpc2NvdmVyeS5zZW5kdGFyZ2V0cy5pc2NzaS5NYXhSZWN2RGF0YVNlZ21lbnRMZW5ndGggPSAxMDQ4NTc2CgoKIwojIE9wZW4taVNDU0kgZGVmYXVsdCBjb25maWd1cmF0aW9uLgojIENvdWxkIGJlIGxvY2F0ZWQgYXQgL2V0Yy9pc2NzaS9pc2NzaWQuY29uZiBvciB+Ly5pc2NzaWQuY29uZgojCiMgTm90ZTogVG8gc2V0IGFueSBvZiB0aGVzZSB2YWx1ZXMgZm9yIGEgc3BlY2lmaWMgbm9kZS9zZXNzaW9uIHJ1bgojIHRoZSBpc2NzaWFkbSAtLW1vZGUgbm9kZSAtLW9wIGNvbW1hbmQgZm9yIHRoZSB2YWx1ZS4gU2VlIHRoZSBSRUFETUUKIyBhbmQgbWFuIHBhZ2UgZm9yIGlzY3NpYWRtIGZvciBkZXRhaWxzIG9uIHRoZSAtLW9wIGNvbW1hbmQuCiMKCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKIyBpc2NzaWQgZGFlbW9uIGNvbmZpZwojIyMjIyMjIyMjIyMjIyMjIyMjIyMjCiMKIyBJZiB5b3Ugd2FudCBpc2NzaWQgdG8gc3RhcnQgdGhlIGZpcnN0IHRpbWUgYW4gaXNjc2kgdG9vbAojIG5lZWRzIHRvIGFjY2VzcyBpdCwgaW5zdGVhZCBvZiBzdGFydGluZyBpdCB3aGVuIHRoZSBpbml0CiMgc2NyaXB0cyBydW4sIHNldCB0aGUgaXNjc2lkIHN0YXJ0dXAgY29tbWFuZCBoZXJlLiBUaGlzCiMgc2hvdWxkIG5vcm1hbGx5IG9ubHkgbmVlZCB0byBiZSBkb25lIGJ5IGRpc3RybyBwYWNrYWdlCiMgbWFpbnRhaW5lcnMuIElmIHlvdSBsZWF2ZSB0aGUgaXNjc2lkIGRhZW1vbiBydW5uaW5nIGFsbAojIHRoZSB0aW1lIHRoZW4gbGVhdmUgdGhpcyBhdHRyaWJ1dGUgY29tbWVudGVkIG91dC4KIwojIERlZmF1bHQgZm9yIEZlZG9yYSBhbmQgUkhFTC4gKHVuY29tbWVudCB0byBhY3RpdmF0ZSkuCmlzY3NpZC5zdGFydHVwID0gL2Jpbi9zeXN0ZW1jdGwgc3RhcnQgaXNjc2lkLnNvY2tldCBpc2NzaXVpby5zb2NrZXQKIyAKIyBEZWZhdWx0IGlmIHlvdSBhcmUgbm90IHVzaW5nIHN5c3RlbWQgKHVuY29tbWVudCB0byBhY3RpdmF0ZSkKIyBpc2NzaWQuc3RhcnR1cCA9IC91c3IvYmluL3NlcnZpY2Ugc3RhcnQgaXNjc2lkCgojIENoZWNrIGZvciBhY3RpdmUgbW91bnRzIG9uIGRldmljZXMgcmVhY2hhYmxlIHRocm91Z2ggYSBzZXNzaW9uCiMgYW5kIHJlZnVzZSB0byBsb2dvdXQgaWYgdGhlcmUgYXJlIGFueS4gIERlZmF1bHRzIHRvICJObyIuCiMgaXNjc2lkLnNhZmVfbG9nb3V0ID0gWWVzCgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwojIE5JQy9IQkEgYW5kIGRyaXZlciBzZXR0aW5ncwojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwojIG9wZW4taXNjc2kgY2FuIGNyZWF0ZSBhIHNlc3Npb24gYW5kIGJpbmQgaXQgdG8gYSBOSUMvSEJBLgojIFRvIHNldCB0aGlzIHVwIHNlZSB0aGUgZXhhbXBsZSBpZmFjZSBjb25maWcgZmlsZS4KCiMqKioqKioqKioqKioqKioqKgojIFN0YXJ0dXAgc2V0dGluZ3MKIyoqKioqKioqKioqKioqKioqCgojIFRvIHJlcXVlc3QgdGhhdCB0aGUgaXNjc2kgaW5pdGQgc2NyaXB0cyBzdGFydHVwIGEgc2Vzc2lvbiBzZXQgdG8gImF1dG9tYXRpYyIuCiMgbm9kZS5zdGFydHVwID0gYXV0b21hdGljCiMKIyBUbyBtYW51YWxseSBzdGFydHVwIHRoZSBzZXNzaW9uIHNldCB0byAibWFudWFsIi4gVGhlIGRlZmF1bHQgaXMgYXV0b21hdGljLgpub2RlLnN0YXJ0dXAgPSBhdXRvbWF0aWMKCiMgRm9yICJhdXRvbWF0aWMiIHN0YXJ0dXAgbm9kZXMsIHNldHRpbmcgdGhpcyB0byAiWWVzIiB3aWxsIHRyeSBsb2dpbnMgb24gZWFjaAojIGF2YWlsYWJsZSBpZmFjZSB1bnRpbCBvbmUgc3VjY2VlZHMsIGFuZCB0aGVuIHN0b3AuICBUaGUgZGVmYXVsdCAiTm8iIHdpbGwgdHJ5CiMgbG9naW5zIG9uIGFsbCBhdmFpbGFibGUgaWZhY2VzIHNpbXVsdGFuZW91c2x5Lgpub2RlLmxlYWRpbmdfbG9naW4gPSBObwoKIyAqKioqKioqKioqKioqCiMgQ0hBUCBTZXR0aW5ncwojICoqKioqKioqKioqKioKCiMgVG8gZW5hYmxlIENIQVAgYXV0aGVudGljYXRpb24gc2V0IG5vZGUuc2Vzc2lvbi5hdXRoLmF1dGhtZXRob2QKIyB0byBDSEFQLiBUaGUgZGVmYXVsdCBpcyBOb25lLgojbm9kZS5zZXNzaW9uLmF1dGguYXV0aG1ldGhvZCA9IENIQVAKCiMgVG8gY29uZmlndXJlIHdoaWNoIENIQVAgYWxnb3JpdGhtcyB0byBlbmFibGUgc2V0CiMgbm9kZS5zZXNzaW9uLmF1dGguY2hhcF9hbGdzIHRvIGEgY29tbWEgc2VwZXJhdGVkIGxpc3QuCiMgVGhlIGFsZ29yaXRobXMgc2hvdWxkIGJlIGxpc3RlbiB3aXRoIG1vc3QgcHJlZmVyZWQgZmlyc3QuCiMgVmFsaWQgdmFsdWVzIGFyZSBNRDUsIFNIQTEsIFNIQTI1NiwgYW5kIFNIQTMtMjU2LgojIFRoZSBkZWZhdWx0IGlzIE1ENS4KI25vZGUuc2Vzc2lvbi5hdXRoLmNoYXBfYWxncyA9IFNIQTMtMjU2LFNIQTI1NixTSEExLE1ENQoKIyBUbyBzZXQgYSBDSEFQIHVzZXJuYW1lIGFuZCBwYXNzd29yZCBmb3IgaW5pdGlhdG9yCiMgYXV0aGVudGljYXRpb24gYnkgdGhlIHRhcmdldChzKSwgdW5jb21tZW50IHRoZSBmb2xsb3dpbmcgbGluZXM6CiNub2RlLnNlc3Npb24uYXV0aC51c2VybmFtZSA9IHVzZXJuYW1lCiNub2RlLnNlc3Npb24uYXV0aC5wYXNzd29yZCA9IHBhc3N3b3JkCgojIFRvIHNldCBhIENIQVAgdXNlcm5hbWUgYW5kIHBhc3N3b3JkIGZvciB0YXJnZXQocykKIyBhdXRoZW50aWNhdGlvbiBieSB0aGUgaW5pdGlhdG9yLCB1bmNvbW1lbnQgdGhlIGZvbGxvd2luZyBsaW5lczoKI25vZGUuc2Vzc2lvbi5hdXRoLnVzZXJuYW1lX2luID0gdXNlcm5hbWVfaW4KI25vZGUuc2Vzc2lvbi5hdXRoLnBhc3N3b3JkX2luID0gcGFzc3dvcmRfaW4KCiMgVG8gZW5hYmxlIENIQVAgYXV0aGVudGljYXRpb24gZm9yIGEgZGlzY292ZXJ5IHNlc3Npb24gdG8gdGhlIHRhcmdldAojIHNldCBkaXNjb3Zlcnkuc2VuZHRhcmdldHMuYXV0aC5hdXRobWV0aG9kIHRvIENIQVAuIFRoZSBkZWZhdWx0IGlzIE5vbmUuCiNkaXNjb3Zlcnkuc2VuZHRhcmdldHMuYXV0aC5hdXRobWV0aG9kID0gQ0hBUAoKIyBUbyBzZXQgYSBkaXNjb3Zlcnkgc2Vzc2lvbiBDSEFQIHVzZXJuYW1lIGFuZCBwYXNzd29yZCBmb3IgdGhlIGluaXRpYXRvcgojIGF1dGhlbnRpY2F0aW9uIGJ5IHRoZSB0YXJnZXQocyksIHVuY29tbWVudCB0aGUgZm9sbG93aW5nIGxpbmVzOgojZGlzY292ZXJ5LnNlbmR0YXJnZXRzLmF1dGgudXNlcm5hbWUgPSB1c2VybmFtZQojZGlzY292ZXJ5LnNlbmR0YXJnZXRzLmF1dGgucGFzc3dvcmQgPSBwYXNzd29yZAoKIyBUbyBzZXQgYSBkaXNjb3Zlcnkgc2Vzc2lvbiBDSEFQIHVzZXJuYW1lIGFuZCBwYXNzd29yZCBmb3IgdGFyZ2V0KHMpCiMgYXV0aGVudGljYXRpb24gYnkgdGhlIGluaXRpYXRvciwgdW5jb21tZW50IHRoZSBmb2xsb3dpbmcgbGluZXM6CiNkaXNjb3Zlcnkuc2VuZHRhcmdldHMuYXV0aC51c2VybmFtZV9pbiA9IHVzZXJuYW1lX2luCiNkaXNjb3Zlcnkuc2VuZHRhcmdldHMuYXV0aC5wYXNzd29yZF9pbiA9IHBhc3N3b3JkX2luCgojICoqKioqKioqCiMgVGltZW91dHMKIyAqKioqKioqKgojCiMgU2VlIHRoZSBpU0NTSSBSRUFETUUncyBBZHZhbmNlZCBDb25maWd1cmF0aW9uIHNlY3Rpb24gZm9yIHRpcHMKIyBvbiBzZXR0aW5nIHRpbWVvdXRzIHdoZW4gdXNpbmcgbXVsdGlwYXRoIG9yIGRvaW5nIHJvb3Qgb3ZlciBpU0NTSS4KIwojIFRvIHNwZWNpZnkgdGhlIGxlbmd0aCBvZiB0aW1lIHRvIHdhaXQgZm9yIHNlc3Npb24gcmUtZXN0YWJsaXNobWVudAojIGJlZm9yZSBmYWlsaW5nIFNDU0kgY29tbWFuZHMgYmFjayB0byB0aGUgYXBwbGljYXRpb24gd2hlbiBydW5uaW5nCiMgdGhlIExpbnV4IFNDU0kgTGF5ZXIgZXJyb3IgaGFuZGxlciwgZWRpdCB0aGUgbGluZS4KIyBUaGUgdmFsdWUgaXMgaW4gc2Vjb25kcyBhbmQgdGhlIGRlZmF1bHQgaXMgMTIwIHNlY29uZHMuCiMgU3BlY2lhbCB2YWx1ZXM6CiMgLSBJZiB0aGUgdmFsdWUgaXMgMCwgSU8gd2lsbCBiZSBmYWlsZWQgaW1tZWRpYXRlbHkuCiMgLSBJZiB0aGUgdmFsdWUgaXMgbGVzcyB0aGFuIDAsIElPIHdpbGwgcmVtYWluIHF1ZXVlZCB1bnRpbCB0aGUgc2Vzc2lvbgojIGlzIGxvZ2dlZCBiYWNrIGluLCBvciB1bnRpbCB0aGUgdXNlciBydW5zIHRoZSBsb2dvdXQgY29tbWFuZC4KI25vZGUuc2Vzc2lvbi50aW1lby5yZXBsYWNlbWVudF90aW1lb3V0ID0gMTIwCgojIFRvIHNwZWNpZnkgdGhlIHRpbWUgdG8gd2FpdCBmb3IgbG9naW4gdG8gY29tcGxldGUsIGVkaXQgdGhlIGxpbmUuCiMgVGhlIHZhbHVlIGlzIGluIHNlY29uZHMgYW5kIHRoZSBkZWZhdWx0IGlzIDE1IHNlY29uZHMuCm5vZGUuY29ublswXS50aW1lby5sb2dpbl90aW1lb3V0ID0gMTUKCiMgVG8gc3BlY2lmeSB0aGUgdGltZSB0byB3YWl0IGZvciBsb2dvdXQgdG8gY29tcGxldGUsIGVkaXQgdGhlIGxpbmUuCiMgVGhlIHZhbHVlIGlzIGluIHNlY29uZHMgYW5kIHRoZSBkZWZhdWx0IGlzIDE1IHNlY29uZHMuCm5vZGUuY29ublswXS50aW1lby5sb2dvdXRfdGltZW91dCA9IDE1CgojIFRpbWUgaW50ZXJ2YWwgdG8gd2FpdCBmb3Igb24gY29ubmVjdGlvbiBiZWZvcmUgc2VuZGluZyBhIHBpbmcuCiNub2RlLmNvbm5bMF0udGltZW8ubm9vcF9vdXRfaW50ZXJ2YWwgPSA1CgojIFRvIHNwZWNpZnkgdGhlIHRpbWUgdG8gd2FpdCBmb3IgYSBOb3Atb3V0IHJlc3BvbnNlIGJlZm9yZSBmYWlsaW5nCiMgdGhlIGNvbm5lY3Rpb24sIGVkaXQgdGhpcyBsaW5lLiBGYWlsaW5nIHRoZSBjb25uZWN0aW9uIHdpbGwKIyBjYXVzZSBJTyB0byBiZSBmYWlsZWQgYmFjayB0byB0aGUgU0NTSSBsYXllci4gSWYgdXNpbmcgZG0tbXVsdGlwYXRoCiMgdGhpcyB3aWxsIGNhdXNlIHRoZSBJTyB0byBiZSBmYWlsZWQgdG8gdGhlIG11bHRpcGF0aCBsYXllci4KI25vZGUuY29ublswXS50aW1lby5ub29wX291dF90aW1lb3V0ID0gNQoKIyBUbyBzcGVjaWZ5IHRoZSB0aW1lIHRvIHdhaXQgZm9yIGFib3J0IHJlc3BvbnNlIGJlZm9yZQojIGZhaWxpbmcgdGhlIG9wZXJhdGlvbiBhbmQgdHJ5aW5nIGEgbG9naWNhbCB1bml0IHJlc2V0IGVkaXQgdGhlIGxpbmUuCiMgVGhlIHZhbHVlIGlzIGluIHNlY29uZHMgYW5kIHRoZSBkZWZhdWx0IGlzIDE1IHNlY29uZHMuCm5vZGUuc2Vzc2lvbi5lcnJfdGltZW8uYWJvcnRfdGltZW91dCA9IDE1CgojIFRvIHNwZWNpZnkgdGhlIHRpbWUgdG8gd2FpdCBmb3IgYSBsb2dpY2FsIHVuaXQgcmVzcG9uc2UKIyBiZWZvcmUgZmFpbGluZyB0aGUgb3BlcmF0aW9uIGFuZCB0cnlpbmcgc2Vzc2lvbiByZS1lc3RhYmxpc2htZW50CiMgZWRpdCB0aGUgbGluZS4KIyBUaGUgdmFsdWUgaXMgaW4gc2Vjb25kcyBhbmQgdGhlIGRlZmF1bHQgaXMgMzAgc2Vjb25kcy4Kbm9kZS5zZXNzaW9uLmVycl90aW1lby5sdV9yZXNldF90aW1lb3V0ID0gMzAKCiMgVG8gc3BlY2lmeSB0aGUgdGltZSB0byB3YWl0IGZvciBhIHRhcmdldCByZXNwb25zZQojIGJlZm9yZSBmYWlsaW5nIHRoZSBvcGVyYXRpb24gYW5kIHRyeWluZyBzZXNzaW9uIHJlLWVzdGFibGlzaG1lbnQKIyBlZGl0IHRoZSBsaW5lLgojIFRoZSB2YWx1ZSBpcyBpbiBzZWNvbmRzIGFuZCB0aGUgZGVmYXVsdCBpcyAzMCBzZWNvbmRzLgpub2RlLnNlc3Npb24uZXJyX3RpbWVvLnRndF9yZXNldF90aW1lb3V0ID0gMzAKCgojKioqKioqCiMgUmV0cnkKIyoqKioqKgoKIyBUbyBzcGVjaWZ5IHRoZSBudW1iZXIgb2YgdGltZXMgaXNjc2lkIHNob3VsZCByZXRyeSBhIGxvZ2luCiMgaWYgdGhlIGxvZ2luIGF0dGVtcHQgZmFpbHMgZHVlIHRvIHRoZSBub2RlLmNvbm5bMF0udGltZW8ubG9naW5fdGltZW91dAojIGV4cGlyaW5nIG1vZGlmeSB0aGUgZm9sbG93aW5nIGxpbmUuIE5vdGUgdGhhdCBpZiB0aGUgbG9naW4gZmFpbHMKIyBxdWlja2x5IChiZWZvcmUgbm9kZS5jb25uWzBdLnRpbWVvLmxvZ2luX3RpbWVvdXQgZmlyZXMpIGJlY2F1c2UgdGhlIG5ldHdvcmsKIyBsYXllciBvciB0aGUgdGFyZ2V0IHJldHVybnMgYW4gZXJyb3IsIGlzY3NpZCBtYXkgcmV0cnkgdGhlIGxvZ2luIG1vcmUgdGhhbgojIG5vZGUuc2Vzc2lvbi5pbml0aWFsX2xvZ2luX3JldHJ5X21heCB0aW1lcy4KIwojIFRoaXMgcmV0cnkgY291bnQgYWxvbmcgd2l0aCBub2RlLmNvbm5bMF0udGltZW8ubG9naW5fdGltZW91dAojIGRldGVybWluZXMgdGhlIG1heGltdW0gYW1vdW50IG9mIHRpbWUgaXNjc2lkIHdpbGwgdHJ5IHRvCiMgZXN0YWJsaXNoIHRoZSBpbml0aWFsIGxvZ2luLiBub2RlLnNlc3Npb24uaW5pdGlhbF9sb2dpbl9yZXRyeV9tYXggaXMKIyBtdWx0aXBsaWVkIGJ5IHRoZSBub2RlLmNvbm5bMF0udGltZW8ubG9naW5fdGltZW91dCB0byBkZXRlcm1pbmUgdGhlCiMgbWF4aW11bSBhbW91bnQuCiMKIyBUaGUgZGVmYXVsdCBub2RlLnNlc3Npb24uaW5pdGlhbF9sb2dpbl9yZXRyeV9tYXggaXMgOCBhbmQKIyBub2RlLmNvbm5bMF0udGltZW8ubG9naW5fdGltZW91dCBpcyAxNSBzbyB3ZSBoYXZlOgojCiMgbm9kZS5jb25uWzBdLnRpbWVvLmxvZ2luX3RpbWVvdXQgKiBub2RlLnNlc3Npb24uaW5pdGlhbF9sb2dpbl9yZXRyeV9tYXggPQojCQkJCQkJCQkxMjAgc2Vjb25kcwojCiMgVmFsaWQgdmFsdWVzIGFyZSBhbnkgaW50ZWdlciB2YWx1ZS4gVGhpcyBvbmx5CiMgYWZmZWN0cyB0aGUgaW5pdGlhbCBsb2dpbi4gU2V0dGluZyBpdCB0byBhIGhpZ2ggdmFsdWUgY2FuIHNsb3cKIyBkb3duIHRoZSBpc2NzaSBzZXJ2aWNlIHN0YXJ0dXAuIFNldHRpbmcgaXQgdG8gYSBsb3cgdmFsdWUgY2FuCiMgY2F1c2UgYSBzZXNzaW9uIHRvIG5vdCBnZXQgbG9nZ2VkIGludG8sIGlmIHRoZXJlIGFyZSBkaXN0dXB0aW9ucwojIGR1cmluZyBzdGFydHVwIG9yIGlmIHRoZSBuZXR3b3JrIGlzIG5vdCByZWFkeSBhdCB0aGF0IHRpbWUuCm5vZGUuc2Vzc2lvbi5pbml0aWFsX2xvZ2luX3JldHJ5X21heCA9IDgKCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCiMgc2Vzc2lvbiBhbmQgZGV2aWNlIHF1ZXVlIGRlcHRoCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCgojIFRvIGNvbnRyb2wgaG93IG1hbnkgY29tbWFuZHMgdGhlIHNlc3Npb24gd2lsbCBxdWV1ZSBzZXQKIyBub2RlLnNlc3Npb24uY21kc19tYXggdG8gYW4gaW50ZWdlciBiZXR3ZWVuIDIgYW5kIDIwNDggdGhhdCBpcyBhbHNvCiMgYSBwb3dlciBvZiAyLiBUaGUgZGVmYXVsdCBpcyAxMjguCiNub2RlLnNlc3Npb24uY21kc19tYXggPSAxMjgKCiMgVG8gY29udHJvbCB0aGUgZGV2aWNlJ3MgcXVldWUgZGVwdGggc2V0IG5vZGUuc2Vzc2lvbi5xdWV1ZV9kZXB0aAojIHRvIGEgdmFsdWUgYmV0d2VlbiAxIGFuZCAxMDI0LiBUaGUgZGVmYXVsdCBpcyAzMi4KI25vZGUuc2Vzc2lvbi5xdWV1ZV9kZXB0aCA9IDMyCgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCiMgTUlTQyBTWVNURU0gUEVSRk9STUFOQ0UgU0VUVElOR1MKIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwoKIyBGb3Igc29mdHdhcmUgaXNjc2kgKGlzY3NpX3RjcCkgYW5kIGlzZXIgKGliX2lzZXIpIGVhY2ggc2Vzc2lvbgojIGhhcyBhIHRocmVhZCB1c2VkIHRvIHRyYW5zbWl0IG9yIHF1ZXVlIGRhdGEgdG8gdGhlIGhhcmR3YXJlLiBGb3IKIyBjeGdiM2kgeW91IHdpbGwgZ2V0IGEgdGhyZWFkIHBlciBob3N0LgojCiMgU2V0dGluZyB0aGUgdGhyZWFkJ3MgcHJpb3JpdHkgdG8gYSBsb3dlciB2YWx1ZSBjYW4gbGVhZCB0byBoaWdoZXIgdGhyb3VnaHB1dAojIGFuZCBsb3dlciBsYXRlbmNpZXMuIFRoZSBsb3dlc3QgdmFsdWUgaXMgLTIwLiBTZXR0aW5nIHRoZSBwcmlvcml0eSB0bwojIGEgaGlnaGVyIHZhbHVlLCBjYW4gbGVhZCB0byByZWR1Y2VkIElPIHBlcmZvcm1hbmNlLCBidXQgaWYgeW91IGFyZSBzZWVpbmcKIyB0aGUgaXNjc2kgb3Igc2NzaSB0aHJlYWRzIGRvbWluYXRlIHRoZSB1c2Ugb2YgdGhlIENQVSB0aGVuIHlvdSBtYXkgd2FudAojIHRvIHNldCB0aGlzIHZhbHVlIGhpZ2hlci4KIwojIE5vdGU6IEZvciBjeGdiM2kgeW91IG11c3Qgc2V0IGFsbCBzZXNzaW9ucyB0byB0aGUgc2FtZSB2YWx1ZSwgb3IgdGhlCiMgYmVoYXZpb3IgaXMgbm90IGRlZmluZWQuCiMKIyBUaGUgZGVmYXVsdCB2YWx1ZSBpcyAtMjAuIFRoZSBzZXR0aW5nIG11c3QgYmUgYmV0d2VlbiAtMjAgYW5kIDIwLgpub2RlLnNlc3Npb24ueG1pdF90aHJlYWRfcHJpb3JpdHkgPSAtMjAKCgojKioqKioqKioqKioqKioqCiMgaVNDU0kgc2V0dGluZ3MKIyoqKioqKioqKioqKioqKgoKIyBUbyBlbmFibGUgUjJUIGZsb3cgY29udHJvbCAoaS5lLiwgdGhlIGluaXRpYXRvciBtdXN0IHdhaXQgZm9yIGFuIFIyVAojIGNvbW1hbmQgYmVmb3JlIHNlbmRpbmcgYW55IGRhdGEpLCB1bmNvbW1lbnQgdGhlIGZvbGxvd2luZyBsaW5lOgojCiNub2RlLnNlc3Npb24uaXNjc2kuSW5pdGlhbFIyVCA9IFllcwojCiMgVG8gZGlzYWJsZSBSMlQgZmxvdyBjb250cm9sIChpLmUuLCB0aGUgaW5pdGlhdG9yIGhhcyBhbiBpbXBsaWVkCiMgaW5pdGlhbCBSMlQgb2YgIkZpcnN0QnVyc3RMZW5ndGgiIGF0IG9mZnNldCAwKSwgdW5jb21tZW50IHRoZSBmb2xsb3dpbmcgbGluZToKIwojIFRoZSBkZWZhdWx0cyBpcyBOby4Kbm9kZS5zZXNzaW9uLmlzY3NpLkluaXRpYWxSMlQgPSBObwoKIwojIFRvIGRpc2FibGUgaW1tZWRpYXRlIGRhdGEgKGkuZS4sIHRoZSBpbml0aWF0b3IgZG9lcyBub3Qgc2VuZAojIHVuc29saWNpdGVkIGRhdGEgd2l0aCB0aGUgaVNDU0kgY29tbWFuZCBQRFUpLCB1bmNvbW1lbnQgdGhlIGZvbGxvd2luZyBsaW5lOgojCiNub2RlLnNlc3Npb24uaXNjc2kuSW1tZWRpYXRlRGF0YSA9IE5vCiMKIyBUbyBlbmFibGUgaW1tZWRpYXRlIGRhdGEgKGkuZS4sIHRoZSBpbml0aWF0b3Igc2VuZHMgdW5zb2xpY2l0ZWQgZGF0YQojIHdpdGggdGhlIGlTQ1NJIGNvbW1hbmQgcGFja2V0KSwgdW5jb21tZW50IHRoZSBmb2xsb3dpbmcgbGluZToKIwojIFRoZSBkZWZhdWx0IGlzIFllcwojbm9kZS5zZXNzaW9uLmlzY3NpLkltbWVkaWF0ZURhdGEgPSBZZXMKCiMgVG8gc3BlY2lmeSB0aGUgbWF4aW11bSBudW1iZXIgb2YgdW5zb2xpY2l0ZWQgZGF0YSBieXRlcyB0aGUgaW5pdGlhdG9yCiMgY2FuIHNlbmQgaW4gYW4gaVNDU0kgUERVIHRvIGEgdGFyZ2V0LCBlZGl0IHRoZSBmb2xsb3dpbmcgbGluZS4KIwojIFRoZSB2YWx1ZSBpcyB0aGUgbnVtYmVyIG9mIGJ5dGVzIGluIHRoZSByYW5nZSBvZiA1MTIgdG8gKDJeMjQtMSkgYW5kCiMgdGhlIGRlZmF1bHQgaXMgMjYyMTQ0CiNub2RlLnNlc3Npb24uaXNjc2kuRmlyc3RCdXJzdExlbmd0aCA9IDI2MjE0NAoKIyBUbyBzcGVjaWZ5IHRoZSBtYXhpbXVtIFNDU0kgcGF5bG9hZCB0aGF0IHRoZSBpbml0aWF0b3Igd2lsbCBuZWdvdGlhdGUKIyB3aXRoIHRoZSB0YXJnZXQgZm9yLCBlZGl0IHRoZSBmb2xsb3dpbmcgbGluZS4KIwojIFRoZSB2YWx1ZSBpcyB0aGUgbnVtYmVyIG9mIGJ5dGVzIGluIHRoZSByYW5nZSBvZiA1MTIgdG8gKDJeMjQtMSkgYW5kCiMgdGhlIGRlZmF1bHMgaXQgMTY3NzYxOTIKI25vZGUuc2Vzc2lvbi5pc2NzaS5NYXhCdXJzdExlbmd0aCA9IDE2Nzc2MTkyCgojIFRvIHNwZWNpZnkgdGhlIG1heGltdW0gbnVtYmVyIG9mIGRhdGEgYnl0ZXMgdGhlIGluaXRpYXRvciBjYW4gcmVjZWl2ZQojIGluIGFuIGlTQ1NJIFBEVSBmcm9tIGEgdGFyZ2V0LCBlZGl0IHRoZSBmb2xsb3dpbmcgbGluZS4KIwojIFRoZSB2YWx1ZSBpcyB0aGUgbnVtYmVyIG9mIGJ5dGVzIGluIHRoZSByYW5nZSBvZiA1MTIgdG8gKDJeMjQtMSkgYW5kCiMgdGhlIGRlZmF1bHQgaXMgMjYyMTQ0CiNub2RlLmNvbm5bMF0uaXNjc2kuTWF4UmVjdkRhdGFTZWdtZW50TGVuZ3RoID0gMjYyMTQ0CgojIFRvIHNwZWNpZnkgdGhlIG1heGltdW0gbnVtYmVyIG9mIGRhdGEgYnl0ZXMgdGhlIGluaXRpYXRvciB3aWxsIHNlbmQKIyBpbiBhbiBpU0NTSSBQRFUgdG8gdGhlIHRhcmdldCwgZWRpdCB0aGUgZm9sbG93aW5nIGxpbmUuCiMKIyBUaGUgdmFsdWUgaXMgdGhlIG51bWJlciBvZiBieXRlcyBpbiB0aGUgcmFuZ2Ugb2YgNTEyIHRvICgyXjI0LTEpLgojIFplcm8gaXMgYSBzcGVjaWFsIGNhc2UuIElmIHNldCB0byB6ZXJvLCB0aGUgaW5pdGlhdG9yIHdpbGwgdXNlCiMgdGhlIHRhcmdldCdzIE1heFJlY3ZEYXRhU2VnbWVudExlbmd0aCBmb3IgdGhlIE1heFhtaXREYXRhU2VnbWVudExlbmd0aC4KIyBUaGUgZGVmYXVsdCBpcyAwLgpub2RlLmNvbm5bMF0uaXNjc2kuTWF4WG1pdERhdGFTZWdtZW50TGVuZ3RoID0gMAoKIyBUbyBzcGVjaWZ5IHRoZSBtYXhpbXVtIG51bWJlciBvZiBkYXRhIGJ5dGVzIHRoZSBpbml0aWF0b3IgY2FuIHJlY2VpdmUKIyBpbiBhbiBpU0NTSSBQRFUgZnJvbSBhIHRhcmdldCBkdXJpbmcgYSBkaXNjb3Zlcnkgc2Vzc2lvbiwgZWRpdCB0aGUKIyBmb2xsb3dpbmcgbGluZS4KIwojIFRoZSB2YWx1ZSBpcyB0aGUgbnVtYmVyIG9mIGJ5dGVzIGluIHRoZSByYW5nZSBvZiA1MTIgdG8gKDJeMjQtMSkgYW5kCiMgdGhlIGRlZmF1bHQgaXMgMzI3NjgKIyAKZGlzY292ZXJ5LnNlbmR0YXJnZXRzLmlzY3NpLk1heFJlY3ZEYXRhU2VnbWVudExlbmd0aCA9IDMyNzY4CgojIFRvIGFsbG93IHRoZSB0YXJnZXRzIHRvIGNvbnRyb2wgdGhlIHNldHRpbmcgb2YgdGhlIGRpZ2VzdCBjaGVja2luZywKIyB3aXRoIHRoZSBpbml0aWF0b3IgcmVxdWVzdGluZyBhIHByZWZlcmVuY2Ugb2YgZW5hYmxpbmcgdGhlIGNoZWNraW5nLCB1bmNvbW1lbnQKIyB0aGUgZm9sbG93aW5nIGxpbmVzIChEYXRhIGRpZ2VzdHMgYXJlIG5vdCBzdXBwb3J0ZWQuKToKI25vZGUuY29ublswXS5pc2NzaS5IZWFkZXJEaWdlc3QgPSBDUkMzMkMsTm9uZQoKIwojIFRvIGFsbG93IHRoZSB0YXJnZXRzIHRvIGNvbnRyb2wgdGhlIHNldHRpbmcgb2YgdGhlIGRpZ2VzdCBjaGVja2luZywKIyB3aXRoIHRoZSBpbml0aWF0b3IgcmVxdWVzdGluZyBhIHByZWZlcmVuY2Ugb2YgZGlzYWJsaW5nIHRoZSBjaGVja2luZywKIyB1bmNvbW1lbnQgdGhlIGZvbGxvd2luZyBsaW5lOgojbm9kZS5jb25uWzBdLmlzY3NpLkhlYWRlckRpZ2VzdCA9IE5vbmUsQ1JDMzJDCiMKIyBUbyBlbmFibGUgQ1JDMzJDIGRpZ2VzdCBjaGVja2luZyBmb3IgdGhlIGhlYWRlciBhbmQvb3IgZGF0YSBwYXJ0IG9mCiMgaVNDU0kgUERVcywgdW5jb21tZW50IHRoZSBmb2xsb3dpbmcgbGluZToKI25vZGUuY29ublswXS5pc2NzaS5IZWFkZXJEaWdlc3QgPSBDUkMzMkMKIwojIFRvIGRpc2FibGUgZGlnZXN0IGNoZWNraW5nIGZvciB0aGUgaGVhZGVyIGFuZC9vciBkYXRhIHBhcnQgb2YKIyBpU0NTSSBQRFVzLCB1bmNvbW1lbnQgdGhlIGZvbGxvd2luZyBsaW5lOgojbm9kZS5jb25uWzBdLmlzY3NpLkhlYWRlckRpZ2VzdCA9IE5vbmUKIwojIFRoZSBkZWZhdWx0IGlzIHRvIG5ldmVyIHVzZSBEYXRhRGlnZXN0cyBvciBIZWFkZXJEaWdlc3RzLgojCm5vZGUuY29ublswXS5pc2NzaS5IZWFkZXJEaWdlc3QgPSBOb25lCgojIEZvciBtdWx0aXBhdGggY29uZmlndXJhdGlvbnMsIHlvdSBtYXkgd2FudCBtb3JlIHRoYW4gb25lIHNlc3Npb24gdG8gYmUKIyBjcmVhdGVkIG9uIGVhY2ggaWZhY2UgcmVjb3JkLiAgSWYgbm9kZS5zZXNzaW9uLm5yX3Nlc3Npb25zIGlzIGdyZWF0ZXIKIyB0aGFuIDEsIHBlcmZvcm1pbmcgYSAnbG9naW4nIGZvciB0aGF0IG5vZGUgd2lsbCBlbnN1cmUgdGhhdCB0aGUKIyBhcHByb3ByaWF0ZSBudW1iZXIgb2Ygc2Vzc2lvbnMgaXMgY3JlYXRlZC4Kbm9kZS5zZXNzaW9uLm5yX3Nlc3Npb25zID0gMQoKIyBXaGVuIGlzY3NpZCBzdGFydHMgdXAgaXQgcmVjb3ZlcnMgZXhpc3Rpbmcgc2Vzc2lvbnMsIGlmIHBvc3NpYmxlLgojIElmIHRoZSB0YXJnZXQgZm9yIGEgc2Vzc2lvbiBoYXMgZ29uZSBhd2F5IHdoZW4gdGhpcyBvY2N1cnMsIHRoZQojIGlzY3NpZCBkYWVtb24gbm9ybWFsbHkgdHJpZXMgdG8gcmVlc3RhYmxpc2ggZWFjaCBzZXNzaW9uLAojIGluIHN1Y2Nlc3Npb24sIGluIHRoZSBiYWNrZ3JvdW5kLCBieSB0cnlpbmcgYWdhaW4gZXZlcnkgdHdvCiMgc2Vjb25kcywgdW50aWwgYWxsIHNlc3Npb25zIGFyZSByZXN0b3JlZC4gVGhpcyBjb25maWd1cmF0aW9uCiMgdmFyaWFibGUgY2FuIGxpbWl0cyB0aGUgbnVtYmVyIG9mIHJldHJpZXMgZm9yIGVhY2ggc2Vzc2lvbi4KIyBGb3IgZXhhbXBsZSwgc2V0dGluZyByZW9wZW5fbWF4PTE1MCB3b3VsZCBtZWFuIHRoYXQgZWFjaCBzZXNzaW9uCiMgcmVjb3Zlcnkgd2FzIGxpbWl0ZWQgdG8gYWJvdXQgZml2ZSBtaW51dGVzLgojIApub2RlLnNlc3Npb24ucmVvcGVuX21heCA9IDAKCiMqKioqKioqKioqKioKIyBXb3JrYXJvdW5kcwojKioqKioqKioqKioqCgojIFNvbWUgdGFyZ2V0cyBsaWtlIElFVCBwcmVmZXIgYWZ0ZXIgYW4gaW5pdGlhdG9yIGhhcyBzZW50IGEgdGFzawojIG1hbmFnZW1lbnQgZnVuY3Rpb24gbGlrZSBhbiBBQk9SVCBUQVNLIG9yIExPR0lDQUwgVU5JVCBSRVNFVCwgdGhhdAojIGl0IGRvZXMgbm90IHJlc3BvbmQgdG8gUERVcyBsaWtlIFIyVHMuIFRvIGVuYWJsZSB0aGlzIGJlaGF2aW9yIHVuY29tbWVudAojIHRoZSBmb2xsb3dpbmcgbGluZSAoVGhlIGRlZmF1bHQgYmVoYXZpb3IgaXMgWWVzKToKbm9kZS5zZXNzaW9uLmlzY3NpLkZhc3RBYm9ydCA9IFllcwoKIyBTb21lIHRhcmdldHMgbGlrZSBFcXVhbG9naWMgcHJlZmVyIHRoYXQgYWZ0ZXIgYW4gaW5pdGlhdG9yIGhhcyBzZW50CiMgYSB0YXNrIG1hbmFnZW1lbnQgZnVuY3Rpb24gbGlrZSBhbiBBQk9SVCBUQVNLIG9yIExPR0lDQUwgVU5JVCBSRVNFVCwgdGhhdAojIGl0IGNvbnRpbnVlIHRvIHJlc3BvbmQgdG8gUjJUcy4gVG8gZW5hYmxlIHRoaXMgdW5jb21tZW50IHRoaXMgbGluZQojIG5vZGUuc2Vzc2lvbi5pc2NzaS5GYXN0QWJvcnQgPSBObwoKIyBUbyBwcmV2ZW50IGRvaW5nIGF1dG9tYXRpYyBzY2FucyB0aGF0IHdvdWxkIGFkZCB1bndhbnRlZCBsdW5zIHRvIHRoZSBzeXN0ZW0KIyB3ZSBjYW4gZGlzYWJsZSB0aGVtIGFuZCBoYXZlIHNlc3Npb25zIG9ubHkgZG8gbWFudWFsbHkgcmVxdWVzdGVkIHNjYW5zLgojIEF1dG9tYXRpYyBzY2FucyBhcmUgcGVyZm9ybWVkIG9uIHN0YXJ0dXAsIG9uIGxvZ2luLCBhbmQgb24gQUVOL0FFUiByZWNlcHRpb24KIyBvbiBkZXZpY2VzIHN1cHBvcnRpbmcgaXQuICBGb3IgSFcgZHJpdmVycyBhbGwgc2Vzc2lvbnMgd2lsbCB1c2UgdGhlIHZhbHVlCiMgZGVmaW5lZCBpbiB0aGUgY29uZmlndXJhdGlvbiBmaWxlLiAgVGhpcyBjb25maWd1cmF0aW9uIG9wdGlvbiBpcyBpbmRlcGVuZGVudAojIG9mIHNjc2lfbW9kIHNjYW4gcGFyYW1ldGVyLiAoVGhlIGRlZmF1bHQgYmVoYXZpb3IgaXMgYXV0byk6Cm5vZGUuc2Vzc2lvbi5zY2FuID0gYXV0bwo=
+      - path: /etc/iscsi/iscsid.conf
         mode: 0600
         overwrite: true
-        path: /etc/iscsi/iscsi.conf
+        contents:
+          inline: |
+            # Nutanix - Linux Client Tuning Example
+            # https://portal.nutanix.com/page/documents/solutions/details?targetId=BP-2049-Nutanix-Volumes:linux-client-tuning-example.html
+            #
+            node.session.timeo.replacement_timeout = 120
+            node.conn[0].timeo.noop_out_interval = 5
+            node.conn[0].timeo.noop_out_timeout = 10
+            node.session.cmds_max = 2048
+            node.session.queue_depth = 1024
+            node.session.iscsi.ImmediateData = Yes
+            node.session.iscsi.FirstBurstLength = 1048576
+            node.session.iscsi.MaxBurstLength = 16776192
+            node.conn[0].iscsi.MaxRecvDataSegmentLength = 1048576
+            discovery.sendtargets.iscsi.MaxRecvDataSegmentLength = 1048576
+
+
+            #
+            # Open-iSCSI default configuration.
+            # Could be located at /etc/iscsi/iscsid.conf or ~/.iscsid.conf
+            #
+            # Note: To set any of these values for a specific node/session run
+            # the iscsiadm --mode node --op command for the value. See the README
+            # and man page for iscsiadm for details on the --op command.
+            #
+
+            ######################
+            # iscsid daemon config
+            ######################
+            #
+            # If you want iscsid to start the first time an iscsi tool
+            # needs to access it, instead of starting it when the init
+            # scripts run, set the iscsid startup command here. This
+            # should normally only need to be done by distro package
+            # maintainers. If you leave the iscsid daemon running all
+            # the time then leave this attribute commented out.
+            #
+            # Default for Fedora and RHEL. (uncomment to activate).
+            iscsid.startup = /bin/systemctl start iscsid.socket iscsiuio.socket
+            # 
+            # Default if you are not using systemd (uncomment to activate)
+            # iscsid.startup = /usr/bin/service start iscsid
+
+            # Check for active mounts on devices reachable through a session
+            # and refuse to logout if there are any.  Defaults to "No".
+            # iscsid.safe_logout = Yes
+
+            #############################
+            # NIC/HBA and driver settings
+            #############################
+            # open-iscsi can create a session and bind it to a NIC/HBA.
+            # To set this up see the example iface config file.
+
+            #*****************
+            # Startup settings
+            #*****************
+
+            # To request that the iscsi initd scripts startup a session set to "automatic".
+            # node.startup = automatic
+            #
+            # To manually startup the session set to "manual". The default is automatic.
+            node.startup = automatic
+
+            # For "automatic" startup nodes, setting this to "Yes" will try logins on each
+            # available iface until one succeeds, and then stop.  The default "No" will try
+            # logins on all available ifaces simultaneously.
+            node.leading_login = No
+
+            # *************
+            # CHAP Settings
+            # *************
+
+            # To enable CHAP authentication set node.session.auth.authmethod
+            # to CHAP. The default is None.
+            #node.session.auth.authmethod = CHAP
+
+            # To configure which CHAP algorithms to enable set
+            # node.session.auth.chap_algs to a comma seperated list.
+            # The algorithms should be listen with most prefered first.
+            # Valid values are MD5, SHA1, SHA256, and SHA3-256.
+            # The default is MD5.
+            #node.session.auth.chap_algs = SHA3-256,SHA256,SHA1,MD5
+
+            # To set a CHAP username and password for initiator
+            # authentication by the target(s), uncomment the following lines:
+            #node.session.auth.username = username
+            #node.session.auth.password = password
+
+            # To set a CHAP username and password for target(s)
+            # authentication by the initiator, uncomment the following lines:
+            #node.session.auth.username_in = username_in
+            #node.session.auth.password_in = password_in
+
+            # To enable CHAP authentication for a discovery session to the target
+            # set discovery.sendtargets.auth.authmethod to CHAP. The default is None.
+            #discovery.sendtargets.auth.authmethod = CHAP
+
+            # To set a discovery session CHAP username and password for the initiator
+            # authentication by the target(s), uncomment the following lines:
+            #discovery.sendtargets.auth.username = username
+            #discovery.sendtargets.auth.password = password
+
+            # To set a discovery session CHAP username and password for target(s)
+            # authentication by the initiator, uncomment the following lines:
+            #discovery.sendtargets.auth.username_in = username_in
+            #discovery.sendtargets.auth.password_in = password_in
+
+            # ********
+            # Timeouts
+            # ********
+            #
+            # See the iSCSI README's Advanced Configuration section for tips
+            # on setting timeouts when using multipath or doing root over iSCSI.
+            #
+            # To specify the length of time to wait for session re-establishment
+            # before failing SCSI commands back to the application when running
+            # the Linux SCSI Layer error handler, edit the line.
+            # The value is in seconds and the default is 120 seconds.
+            # Special values:
+            # - If the value is 0, IO will be failed immediately.
+            # - If the value is less than 0, IO will remain queued until the session
+            # is logged back in, or until the user runs the logout command.
+            #node.session.timeo.replacement_timeout = 120
+
+            # To specify the time to wait for login to complete, edit the line.
+            # The value is in seconds and the default is 15 seconds.
+            node.conn[0].timeo.login_timeout = 15
+
+            # To specify the time to wait for logout to complete, edit the line.
+            # The value is in seconds and the default is 15 seconds.
+            node.conn[0].timeo.logout_timeout = 15
+
+            # Time interval to wait for on connection before sending a ping.
+            #node.conn[0].timeo.noop_out_interval = 5
+
+            # To specify the time to wait for a Nop-out response before failing
+            # the connection, edit this line. Failing the connection will
+            # cause IO to be failed back to the SCSI layer. If using dm-multipath
+            # this will cause the IO to be failed to the multipath layer.
+            #node.conn[0].timeo.noop_out_timeout = 5
+
+            # To specify the time to wait for abort response before
+            # failing the operation and trying a logical unit reset edit the line.
+            # The value is in seconds and the default is 15 seconds.
+            node.session.err_timeo.abort_timeout = 15
+
+            # To specify the time to wait for a logical unit response
+            # before failing the operation and trying session re-establishment
+            # edit the line.
+            # The value is in seconds and the default is 30 seconds.
+            node.session.err_timeo.lu_reset_timeout = 30
+
+            # To specify the time to wait for a target response
+            # before failing the operation and trying session re-establishment
+            # edit the line.
+            # The value is in seconds and the default is 30 seconds.
+            node.session.err_timeo.tgt_reset_timeout = 30
+
+
+            #******
+            # Retry
+            #******
+
+            # To specify the number of times iscsid should retry a login
+            # if the login attempt fails due to the node.conn[0].timeo.login_timeout
+            # expiring modify the following line. Note that if the login fails
+            # quickly (before node.conn[0].timeo.login_timeout fires) because the network
+            # layer or the target returns an error, iscsid may retry the login more than
+            # node.session.initial_login_retry_max times.
+            #
+            # This retry count along with node.conn[0].timeo.login_timeout
+            # determines the maximum amount of time iscsid will try to
+            # establish the initial login. node.session.initial_login_retry_max is
+            # multiplied by the node.conn[0].timeo.login_timeout to determine the
+            # maximum amount.
+            #
+            # The default node.session.initial_login_retry_max is 8 and
+            # node.conn[0].timeo.login_timeout is 15 so we have:
+            #
+            # node.conn[0].timeo.login_timeout * node.session.initial_login_retry_max =
+            #								120 seconds
+            #
+            # Valid values are any integer value. This only
+            # affects the initial login. Setting it to a high value can slow
+            # down the iscsi service startup. Setting it to a low value can
+            # cause a session to not get logged into, if there are distuptions
+            # during startup or if the network is not ready at that time.
+            node.session.initial_login_retry_max = 8
+
+            ################################
+            # session and device queue depth
+            ################################
+
+            # To control how many commands the session will queue set
+            # node.session.cmds_max to an integer between 2 and 2048 that is also
+            # a power of 2. The default is 128.
+            #node.session.cmds_max = 128
+
+            # To control the device's queue depth set node.session.queue_depth
+            # to a value between 1 and 1024. The default is 32.
+            #node.session.queue_depth = 32
+
+            ##################################
+            # MISC SYSTEM PERFORMANCE SETTINGS
+            ##################################
+
+            # For software iscsi (iscsi_tcp) and iser (ib_iser) each session
+            # has a thread used to transmit or queue data to the hardware. For
+            # cxgb3i you will get a thread per host.
+            #
+            # Setting the thread's priority to a lower value can lead to higher throughput
+            # and lower latencies. The lowest value is -20. Setting the priority to
+            # a higher value, can lead to reduced IO performance, but if you are seeing
+            # the iscsi or scsi threads dominate the use of the CPU then you may want
+            # to set this value higher.
+            #
+            # Note: For cxgb3i you must set all sessions to the same value, or the
+            # behavior is not defined.
+            #
+            # The default value is -20. The setting must be between -20 and 20.
+            node.session.xmit_thread_priority = -20
+
+
+            #***************
+            # iSCSI settings
+            #***************
+
+            # To enable R2T flow control (i.e., the initiator must wait for an R2T
+            # command before sending any data), uncomment the following line:
+            #
+            #node.session.iscsi.InitialR2T = Yes
+            #
+            # To disable R2T flow control (i.e., the initiator has an implied
+            # initial R2T of "FirstBurstLength" at offset 0), uncomment the following line:
+            #
+            # The defaults is No.
+            node.session.iscsi.InitialR2T = No
+
+            #
+            # To disable immediate data (i.e., the initiator does not send
+            # unsolicited data with the iSCSI command PDU), uncomment the following line:
+            #
+            #node.session.iscsi.ImmediateData = No
+            #
+            # To enable immediate data (i.e., the initiator sends unsolicited data
+            # with the iSCSI command packet), uncomment the following line:
+            #
+            # The default is Yes
+            #node.session.iscsi.ImmediateData = Yes
+
+            # To specify the maximum number of unsolicited data bytes the initiator
+            # can send in an iSCSI PDU to a target, edit the following line.
+            #
+            # The value is the number of bytes in the range of 512 to (2^24-1) and
+            # the default is 262144
+            #node.session.iscsi.FirstBurstLength = 262144
+
+            # To specify the maximum SCSI payload that the initiator will negotiate
+            # with the target for, edit the following line.
+            #
+            # The value is the number of bytes in the range of 512 to (2^24-1) and
+            # the defauls it 16776192
+            #node.session.iscsi.MaxBurstLength = 16776192
+
+            # To specify the maximum number of data bytes the initiator can receive
+            # in an iSCSI PDU from a target, edit the following line.
+            #
+            # The value is the number of bytes in the range of 512 to (2^24-1) and
+            # the default is 262144
+            #node.conn[0].iscsi.MaxRecvDataSegmentLength = 262144
+
+            # To specify the maximum number of data bytes the initiator will send
+            # in an iSCSI PDU to the target, edit the following line.
+            #
+            # The value is the number of bytes in the range of 512 to (2^24-1).
+            # Zero is a special case. If set to zero, the initiator will use
+            # the target's MaxRecvDataSegmentLength for the MaxXmitDataSegmentLength.
+            # The default is 0.
+            node.conn[0].iscsi.MaxXmitDataSegmentLength = 0
+
+            # To specify the maximum number of data bytes the initiator can receive
+            # in an iSCSI PDU from a target during a discovery session, edit the
+            # following line.
+            #
+            # The value is the number of bytes in the range of 512 to (2^24-1) and
+            # the default is 32768
+            # 
+            discovery.sendtargets.iscsi.MaxRecvDataSegmentLength = 32768
+
+            # To allow the targets to control the setting of the digest checking,
+            # with the initiator requesting a preference of enabling the checking, uncomment
+            # the following lines (Data digests are not supported.):
+            #node.conn[0].iscsi.HeaderDigest = CRC32C,None
+
+            #
+            # To allow the targets to control the setting of the digest checking,
+            # with the initiator requesting a preference of disabling the checking,
+            # uncomment the following line:
+            #node.conn[0].iscsi.HeaderDigest = None,CRC32C
+            #
+            # To enable CRC32C digest checking for the header and/or data part of
+            # iSCSI PDUs, uncomment the following line:
+            #node.conn[0].iscsi.HeaderDigest = CRC32C
+            #
+            # To disable digest checking for the header and/or data part of
+            # iSCSI PDUs, uncomment the following line:
+            #node.conn[0].iscsi.HeaderDigest = None
+            #
+            # The default is to never use DataDigests or HeaderDigests.
+            #
+            node.conn[0].iscsi.HeaderDigest = None
+
+            # For multipath configurations, you may want more than one session to be
+            # created on each iface record.  If node.session.nr_sessions is greater
+            # than 1, performing a 'login' for that node will ensure that the
+            # appropriate number of sessions is created.
+            node.session.nr_sessions = 1
+
+            # When iscsid starts up it recovers existing sessions, if possible.
+            # If the target for a session has gone away when this occurs, the
+            # iscsid daemon normally tries to reestablish each session,
+            # in succession, in the background, by trying again every two
+            # seconds, until all sessions are restored. This configuration
+            # variable can limits the number of retries for each session.
+            # For example, setting reopen_max=150 would mean that each session
+            # recovery was limited to about five minutes.
+            # 
+            node.session.reopen_max = 0
+
+            #************
+            # Workarounds
+            #************
+
+            # Some targets like IET prefer after an initiator has sent a task
+            # management function like an ABORT TASK or LOGICAL UNIT RESET, that
+            # it does not respond to PDUs like R2Ts. To enable this behavior uncomment
+            # the following line (The default behavior is Yes):
+            node.session.iscsi.FastAbort = Yes
+
+            # Some targets like Equalogic prefer that after an initiator has sent
+            # a task management function like an ABORT TASK or LOGICAL UNIT RESET, that
+            # it continue to respond to R2Ts. To enable this uncomment this line
+            # node.session.iscsi.FastAbort = No
+
+            # To prevent doing automatic scans that would add unwanted luns to the system
+            # we can disable them and have sessions only do manually requested scans.
+            # Automatic scans are performed on startup, on login, and on AEN/AER reception
+            # on devices supporting it.  For HW drivers all sessions will use the value
+            # defined in the configuration file.  This configuration option is independent
+            # of scsi_mod scan parameter. (The default behavior is auto):
+            node.session.scan = auto
