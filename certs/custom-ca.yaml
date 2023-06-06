@@ -1,10 +1,10 @@
-apiVersion: v1
 kind: ConfigMap
+apiVersion: v1
 metadata:
   name: custom-ca
   namespace: openshift-config
 data:
-  ca-bundle.cert: |
+  ca-bundle.crt: |
     -----BEGIN CERTIFICATE-----
     MIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw
     TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh
