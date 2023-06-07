@@ -46,6 +46,7 @@ metadata:
   name: etcd-backup
   namespace: etcdbackup
 spec:
+  storageClassName: nfs-csi-delete
   accessModes:
     - ReadWriteOnce
   resources:
